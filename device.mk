@@ -9,7 +9,7 @@ $(call inherit-product, vendor/meizu/m1892/m1892-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-mokee
+    $(LOCAL_PATH)/overlay-lineage
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -18,3 +18,10 @@ PRODUCT_PACKAGES += \
 
 # Inherit from sdm845-common
 $(call inherit-product, device/meizu/sdm845-common/common.mk)
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor
